@@ -60,6 +60,8 @@ jobs:
           with:
             personalAccessToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
             clusterName: k8s-ci-cd
+          env:
+            ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
         - name: set deployment image
           run: kubectl set image deployment goserver goserver=fernandojpessoa/goserver:${{ steps.tagging.outputs.new_version }}
