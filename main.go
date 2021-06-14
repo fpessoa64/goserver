@@ -21,8 +21,8 @@ func init() {
 var quit = make(chan struct{})
 
 func main() {
-	fmt.Println("Ola mundo")
-	log.Info("Ola mundo")
+	fmt.Println("Ola mundo 2")
+	log.Info("Ola mundo 2")
 	done := make(chan bool, 1)
 
 	handleSigterm(func() {
